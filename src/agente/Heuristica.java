@@ -9,8 +9,6 @@ package agente;
  *
  * @author Marlon Prudente <marlonoliveira@alunos.utfpr.edu.br>
  */
-public class Main {
-    public static void main(String[] args) {
-        
-    }
+public class Heuristica {
+    
 }
