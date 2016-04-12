@@ -5,21 +5,25 @@
  */
 package principal;
 import ambiente.Grafo;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 /**
  *
  * @author Marlon Prudente <marlonoliveira@alunos.utfpr.edu.br>
  */
 public class Main {
     public static void main(String[] args) throws IOException {
-        int[][] m = new int[2][2];
-       for (int i = 0; i<2; i++){
-           for(int j = 0;j<2;j++){
-               m[i][j] =i+2;
-           }
-       }
-        Grafo grafo = new Grafo(m);
+        FileInputStream stream = new FileInputStream("grafo.txt");
+        InputStreamReader streamReader = new InputStreamReader(stream);
+        BufferedReader reader = new BufferedReader(streamReader);
+        String linha;
         
-        grafo.imprimeGrafo();
+        while ((linha = reader.readLine()) != null) {
+            System.out.println(linha);
+            
+            
+        }
     }
 }
