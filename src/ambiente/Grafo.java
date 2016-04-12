@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class Grafo {
 	private ArrayList arestas;
 	private ArrayList vertices;
-	private int [][]matrizAdjacencia;
+	private int [][] matrizAdjacencia;
 	private int [][] matrizIncidencia;
 	private boolean isOrientado;
 //	Cria um grafo usando matriz de adjacencia
@@ -116,14 +116,14 @@ public class Grafo {
 	public void imprimeGrafo() throws IOException{
 		int i, j;
 		System.out.println(" ");
-		for(i=0; i<=(getQtdVertices()-1);i++){
+		for(i=0; i<getQtdVertices();i++){
 			System.out.println(i);
 			System.out.println("\n");
 			for(i=0; i<=(getQtdVertices()-1);i++){
 				System.out.println(i);
 				for(j=0; j<=(getQtdVertices()-1);j++){
-					System.out.println(matrizAdjacencia[i][j]);
-					System.out.println(matrizIncidencia[i][j]);
+					System.out.print(matrizAdjacencia[i][j]);
+					//System.out.println(matrizIncidencia[i][j]);
 				}
 			}
 		}
