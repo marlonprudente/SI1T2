@@ -28,10 +28,10 @@ public class Grafo {
 		}
 		for (int i=0;i<matrizAdjacencias.length;i++) {
 			for (int j=0;j<matrizAdjacencias.length;j++) {
-				if(matrizAdjacencias[i][j]==1){
+				if(matrizAdjacencias[i][j]>0){
 					Vertice v1 = this.getVertice(i);
 					Vertice v2 = this.getVertice(j);
-					this.addAresta(v1,v2);
+					this.addAresta(v1,v2, matrizAdjacencias[i][j]);
 				}
 			}
 		}
@@ -45,9 +45,10 @@ public class Grafo {
 		this.updateMatrizIncidencias();
 		return(v);
 	}
-	public  Aresta addAresta(Vertice _v1, Vertice _v2){
+	public  Aresta addAresta(Vertice _v1, Vertice _v2, int peso){
 		if(this.getArestaEntreVertices(_v1,_v2)==null){
 			Aresta aresta = new Aresta(_v1,_v2);
+                        aresta.setPeso(peso);
 			arestas.add(aresta);
 			this.updateMatrizAdjacencias();
 			this.updateMatrizIncidencias();
