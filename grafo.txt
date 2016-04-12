@@ -1,8 +1,7 @@
-﻿B. Horizonte
+﻿Salvador
 Curitiba
 
-R. Janeiro
-S. Paulo
-
+Florianopolis
+Blumenau
 1;2;100
 2;1;250

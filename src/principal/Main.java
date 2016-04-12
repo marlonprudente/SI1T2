@@ -36,10 +36,7 @@ public class Main {
                 dist.add(t);
             }
         }
-         System.out.println("Tam Lista Cidade: " + cidades.size());
-         for(String s : cidades){
-             System.out.print(s + " ");
-         }
+         System.out.println("Tam Lista Cidade: " + cidades.size());  
          System.out.println("\nTam Lista Distancia: " + dist.size());
         //=====================================
         int n = cidades.size();
