@@ -40,8 +40,8 @@ public class Main {
             }
         }
         /*=======================================================*/
-         System.out.println("Tam Lista Cidade: " + cidades.size());  
-         System.out.println("\nTam Lista Distancia: " + dist.size());
+         System.out.println("Tam Lista Cidade (Vertices): " + cidades.size());  
+         System.out.println("\nTam Lista Distancia (Arestas): " + dist.size());
         //=====================================
         //Criacao da matriz de adjacencia
         int n = cidades.size();
