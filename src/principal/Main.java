@@ -26,36 +26,30 @@ public class Main {
         BufferedReader reader = new BufferedReader(streamReader);
         String linha;
         List<String> cidades = new ArrayList<String>();;
+        List<String[]> dist = new ArrayList<String[]>();
         while ((linha = reader.readLine()) != null) {
             if (!linha.contains(";")) {
                 cidades.add(linha);
             } 
             else {
                 String[] t = linha.split(";");
-                System.out.println(t[0]);
-                System.out.println(t[1]);
-                System.out.println(t[2]);
-
+                dist.add(t);
             }
         }
+         System.out.println("Tam Lista Cidade: " + cidades.size());
+         for(String s : cidades){
+             System.out.print(s + " ");
+         }
+         System.out.println("\nTam Lista Distancia: " + dist.size());
         //=====================================
-        int n = cidades.size()/2;
+        int n = cidades.size();
         int[][] m = new int[n][n];
-        while ((linha = reader.readLine()) != null) {
-         if (linha.contains(";")) {
-                String[] t = linha.split(";");
-               m[Integer.parseInt(t[0])][Integer.parseInt(t[1])] = Integer.parseInt(t[2]);
-            } 
 
-        }
-        //======================================
-        System.out.println("Tam: " + cidades.size());
-        for (String s : cidades) {
-
-            System.out.println(s);
-
-        }
-        System.out.println("Tam: " + cidades.size());
+            for(String[] it : dist){
+                m[Integer.parseInt(it[0])][Integer.parseInt(it[1])] = Integer.parseInt(it[2]);
+            }
+ 
+        //======================================         
         for(int i = 0; i<n;i++){
             System.out.println(" ");
             for(int j = 0; j<n;j++){
