@@ -33,14 +33,24 @@ public class Graph {
     public void PrintGraph() {
         int n = m.length;
         for (int i = 0; i < n; i++) {
-           // System.out.println(" ");
+            // System.out.println(" ");
             for (int j = 0; j < n; j++) {
-                if(m[i][j]>0){
+                if (m[i][j] > 0) {
                     System.out.println(vertices.get(i) + "->" + vertices.get(j) + " Peso: " + m[i][j]);
                 }
-                
+
             }
-            
+
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println(" ");
+            for (int j = 0; j < n; j++) {
+                
+                    System.out.print(m[i][j] + " ");
+               
+
+            }
+
         }
     }
 }

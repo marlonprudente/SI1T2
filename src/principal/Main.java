@@ -40,6 +40,8 @@ public class Main {
         
         Graph grafo = new Graph(cidades, dist);      
         grafo.PrintGraph();
-        
+        stream.close();
+        streamReader.close();
+        reader.close();
     }
 }

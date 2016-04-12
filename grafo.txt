@@ -1,5 +1,8 @@
-﻿Sao Paulo
-Curitiba
+﻿0)Sao Paulo
+1)Curitiba
 
+2)Salvador
 0;1;100
+0;2;500
 1;0;250
+1;2;300
